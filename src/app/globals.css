@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-canvas text-night antialiased; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition disabled:opacity-50; }
+  .btn-dark { @apply bg-night text-white hover:bg-black; }
+  .btn-sand { @apply bg-sand text-night hover:bg-[#e4dccb]; }
+  .btn-primary { @apply bg-brand text-white hover:bg-brand-dark; }
+  .btn-outline { @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50; }
+  .btn-danger { @apply bg-red-600 text-white hover:bg-red-700; }
+
+  .input { @apply w-full rounded-xl bg-sand px-4 py-3 text-sm text-night outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-brand/40; }
+  select.input {
+    @apply appearance-none pr-10;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b6580' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+  .input-white { @apply bg-white shadow-sm; }
+
+  .label { @apply mb-1.5 block font-mono text-[11px] uppercase tracking-wider text-slate-500; }
+  .card { @apply rounded-2xl bg-white shadow-[0_1px_2px_rgba(30,21,54,0.05)]; }
+  .th { @apply px-4 py-3.5 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-white/80; }
+  .td { @apply px-4 py-3 text-sm; }
+  .icon-btn { @apply flex h-8 w-8 items-center justify-center rounded-lg bg-sand/70 text-slate-500 transition hover:bg-sand hover:text-night; }
+}
